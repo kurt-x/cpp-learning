@@ -6,10 +6,14 @@
 
 using namespace std;
 
+typedef char* byte_p; // 为一个类型声明别名
+
 int main()
 {
     int _v; // 声明变量
     _v = 5; // 变量赋值
+
+    int x, y; // 声明多个变量
     
     int __v = 5; // 声明并赋值变量
 
@@ -54,9 +58,9 @@ int main()
 
     // c++ 支持 Unicode
     char 字符 = 'a';
-    wchar_t wc = L'P'; // 宽字符类型，至少 2 字节
-    char16_t c16 = u'P'; // 16 位无符号字符类型
-    char32_t c32 = U'中'; // 32 位无符号字符类型
+    wchar_t wc = L'P';      // 宽字符类型，至少 2 字节
+    char16_t c16 = u'P';    // 16 位无符号字符类型
+    char32_t c32 = U'中';   // 32 位无符号字符类型
     // 小写 u 表示 UTF-16，大写 U 表示 UTF-32
 
     // 布尔类型，1 字节
@@ -143,13 +147,13 @@ int main()
     cout << (*hat_p).name << "   in: " << hat_p << endl;
     cout << glass_p->name << " in: " << glass_p << endl;
 
-    int *int_p = new int; // 分配一个 int 大小的内存，相当于 malloc
-    delete int_p; // 释放内存，相当于 free
+    int *int_p = new int;           // 分配一个 int 大小的内存，相当于 malloc
+    delete int_p;                   // 释放内存，相当于 free
     int *arr_p = new int[10];
-    delete [] arr_p; // 释放数组需要加中括号
+    delete [] arr_p;                // 释放数组需要加中括号
     product *obj_p = new product;
     delete obj_p;
-    obj_p = nullptr; // delete 之后原指针不会被删除，将该指针指向空地址防止双重释放
+    obj_p = nullptr;                // delete 之后原指针不会被删除，将该指针指向空地址防止双重释放
 
     // vector
     vector<int> vi(10); // 创建一个有 10 个元素的 int 向量
