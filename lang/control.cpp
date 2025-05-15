@@ -23,4 +23,37 @@ int main()
     // do while 循环
     int di = 0;
     do cout << "do while loop: " << di++ << endl; while (di < 5);
+
+    // int num = 7;
+    // for (int i = 0, s = 1, sum = 1; i < num;)
+
+    // if else 分支
+    if (true) {} else {}
+
+    true ? 1 : 2; // ?: 用于替代 if else
+
+    if (true) {}
+    else if (false) {}
+    else {}
+
+    // switch 分支
+    switch (1)
+    {
+        case 1:
+            cout << "case 1" << endl;
+            break;
+        case 2:
+            cout << "case 2" << endl;
+            break;
+        default:
+            break;
+    }
+
+    while (true)
+    {
+        // break 跳出循环
+        if (true) break;
+        // continue 跳过本次循环
+        continue;
+    }
 }
